@@ -9,14 +9,52 @@
 </head>
     <body>
         <div id="container1" class="container">
-            <div id="c1_1" class="child"><img src="/odin-form/images/og.png" alt="OG Logo"></div>
+            <div id="c1_1" class="child">
+                <img src="/odin-form/images/og.png" alt="OG Logo">
             </div>
-            
         </div>
+        
         <div id="container2" class="container">
-            <div id="c2_1" class="child">Child 1 of second div</div>
-            <div id="c2_2" class="child">Child 2 of second div</div>
-            <div id="c2_3" class="child">Child 3 of second div</div>
+            <div id="c2_1" class="child">
+                <p>Looking for someone who knows how to keep things trimmed and tidy? Welcome to OnlyGrandpas – where single grandpas bring more than just charm! These silver foxes know how to handle their tools, whether it’s fixing the sink or keeping their lawns in pristine condition. They’re experts at slow, thorough jobs that get done right the first time. Hungry for more? They might even treat you to breakfast – and yes, we're talking about the kind of breakfast that keeps you satisfied ‘til noon.</p>
+                <p>Sign up now.</p>
+                
+            </div>
+            <div id="c2_2" class="child">
+                <p class="form-group">You know you want to.</p>
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                </form>
+            </div>
+            <div id="c2_3" class="child">
+                <div id="c2_3_1">
+                    <button id="submit" type="submit">Create Account</button>
+                    <p>Already have an account? <a href="#">Sign in</a></p>
+                </div>
+            </div>
         </div>
     </body>
 </html>
