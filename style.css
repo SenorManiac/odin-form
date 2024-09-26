@@ -104,6 +104,13 @@ img{
     flex-direction: column; /* Stack label above input */
 }
 
+#c2_2 > form > .form-control-success {
+    flex: 1 1 calc(50% - 20px); /* Two columns with gap adjustment */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    display: flex;
+    flex-direction: column; /* Stack label above input */
+}
+
 #c2_2 > form > .form-group label {
     margin-bottom: 5px; /* Space between label and input */
 }
@@ -139,4 +146,21 @@ button {
     border-radius: 10px;
     cursor: pointer;
     box-shadow: outset 10px 10px 10px rgb(189, 171, 167);
+}
+
+#c2_2 > form > .form-group small {
+    color: red;
+    visibility: hidden;
+}
+
+#c2_2 > form > .form-group.error small {
+    visibility: visible;
+}
+
+#c2_2 > form > .form-group.error input {
+    border-color: red;
+}
+
+#c2_2 > form > .form-group.success input {
+    border-color: green;
 }
