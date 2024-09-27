@@ -87,11 +87,9 @@ img{
     width: 40%; /* Adjust as needed */
     padding-top: 10px;
     gap: 10px;
-    margin-left: 10%;
 }
 #c2_2 > p {
     width: 60%;
-    margin-left: 10%;
     margin-bottom: 10px;
     font-size: 1.5em;
     margin-bottom: 3%;
@@ -105,6 +103,12 @@ img{
 }
 
 #c2_2 > form > .form-control-success {
+    flex: 1 1 calc(50% - 20px); /* Two columns with gap adjustment */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    display: flex;
+    flex-direction: column; /* Stack label above input */
+}
+#c2_2 > form > .form-control-error {
     flex: 1 1 calc(50% - 20px); /* Two columns with gap adjustment */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
     display: flex;
@@ -148,6 +152,47 @@ button {
     box-shadow: outset 10px 10px 10px rgb(189, 171, 167);
 }
 
+/* Ensure the parent container is a flex container */
+#c2_2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    background-color: rgb(166, 177, 178);
+}
+
+#c2_2 > p {
+    width: 60%;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+#c2_2 > form {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    width: 50%; /* Adjust as needed */
+    padding-top: 10px;
+    background-color: rgb(166, 177, 178);
+    gap: 10px;
+    margin-left: 10%;
+   
+}
+
+#c2_2 > form > .form-group {
+    flex: 1 1 calc(50% - 20px); /* Two columns with gap adjustment */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    display: flex;
+    flex-direction: column; /* Stack label above input */
+}
+
+#c2_2 > form > .form-group label {
+    margin-bottom: 5px; /* Space between label and input */
+}
+
 #c2_2 > form > .form-group small {
     color: red;
     visibility: hidden;
@@ -163,4 +208,28 @@ button {
 
 #c2_2 > form > .form-group.success input {
     border-color: green;
+}
+
+.error-popup {
+    position: absolute;
+    max-width: 200px; /* Set a maximum width for the popup */
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 14px;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    word-wrap: break-word; /* Ensure long words break to fit within the popup */
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
